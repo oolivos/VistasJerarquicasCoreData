@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Autores" representedClassName="Autores" syncable="YES" codeGenerationType="class">
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fk_autores_libros" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Libros" inverseName="fk_libros_autor" inverseEntity="Libros" syncable="YES"/>
+    </entity>
+    <entity name="Libros" representedClassName="Libros" codeGenerationType="class">
+        <attribute name="autores" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="portada" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fk_libros_autor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Autores" inverseName="fk_autores_libros" inverseEntity="Autores" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <fetchRequest name="libroRequest" entity="Libros" predicateString="isbn == $isbn"/>
+    <fetchRequest name="librosRequest" entity="Libros"/>
+    <elements>
+        <element name="Autores" positionX="261" positionY="216" width="128" height="75"/>
+        <element name="Libros" positionX="261" positionY="189" width="128" height="120"/>
+    </elements>
+</model>
