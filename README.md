@@ -1,2 +1,3 @@
-# VistasJerarquicas
-# VistasJerarquicas
+# VistasJerarquicasCoreData
+By Oscar J Olivos
+
